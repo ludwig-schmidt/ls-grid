@@ -1,0 +1,19 @@
+{
+  "name": "ls-grid",
+  "homepage": "https://github.com/ludwig-schmidt/ls-grid",
+    "description": "A tiny responsive grid library",
+  "main": "sass/_grid.sass",
+  "moduleType": [],
+  "keywords": [
+    "grid",
+    "responsive",
+    "sass"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "README.md",
+    "LICENSE"
+  ]
+}
