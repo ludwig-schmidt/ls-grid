@@ -1,0 +1,118 @@
+///////////
+// GRID 
+///////////
+
+$columns: 12 !default
+$column-width: 73px !default
+$gutter-width: 24px !default
+
+
+$grid-width: $columns * $column-width + ($columns - 1) * $gutter-width
+
+$breakpoint-small: 768px
+$breakpoint-middle: $grid-width
+$breakpoint-big: 1440px
+
+
+
+=break-at($point) 
+    @media (min-width: $point)  
+        @content
+
+
+=clearfix()
+    &:after,
+    &:before
+        content: ''
+        display: table
+        clear: both
+    
+
+
+@function percentage($size, $width)
+    @return $size / $width * 100%
+
+
+
+@function column($value)
+    $width: $value * $column-width + ($value - 1) * $gutter-width
+    @return percentage($width, $grid-width)
+
+    
+    
+
+    
+.section
+    padding: 4rem 0
+    text-align: center
+    
+    
+    +break-at($breakpoint-small)
+        padding: 5rem 0
+        text-align: left
+
+
+.container
+    max-width: $grid-width
+    margin: 0 auto
+    padding: 0 1em
+    
+    
+    &--full-width
+        max-width: none
+    
+.row
+    +clearfix()
+    
+    
+    +break-at($breakpoint-small)
+        &:last-child .col
+            margin-bottom: 0
+        
+        
+    &:last-child .col:last-child
+        margin-bottom: 0
+
+    
+.col
+    float: left
+    margin-bottom: 2em
+    
+    &:last-child
+        margin-right: 0
+    
+    
+    @for $i from 1 to $columns
+        .w-#{$i}
+            width: 100%
+
+
+.m-w-1
+    width: 49%
+    margin-right: 2%
+
+
+    +break-at($breakpoint-small)
+        @for $i from 1 through $columns
+            .w-#{$i}
+                width: column($i)
+                margin-right: percentage($gutter-width, $grid-width)
+
+
+            .p-#{$i}
+                margin-left: column($i) + percentage($gutter-width, $grid-width)
+
+    
+.box
+    float: left
+    margin: 0
+    
+    @for $i from 1 through $columns
+        &.w-#{$i}
+            width: (100% / $columns) * $i
+        
+        
+        &.p-#{$i}
+            margin-left: (100% / $columns) * $i
+
+    
