@@ -9,6 +9,7 @@
     "responsive",
     "sass"
   ],
+  "license": "",
   "ignore": [
     "**/.*",
     "node_modules",
