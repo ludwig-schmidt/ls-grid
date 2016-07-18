@@ -31,6 +31,8 @@ If you put these values into the formula you get a 1140px grid with 12 columns:
     
 *Tip: Use a grid calculator to find a good grid size (e.g.:http://gridcalculator.dk/#/1140/12/24/0)*
 
+![alt tag](https://github.com/ludwig-schmidt/ls-grid/blob/master/img/grid.png)
+
 ## Basic Use
 
 The Basic html structure looks like this: 
