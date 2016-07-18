@@ -97,3 +97,8 @@ In our example with 12 columns the total number of width and push values in a ro
     
     5 + 5 + 2 = 12
     
+## ls-grid in action
+
+Websites using ls-grid: 
+
+http://www.ludwigschmidt.berlin
