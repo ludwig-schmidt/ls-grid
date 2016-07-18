@@ -46,7 +46,10 @@ The Basic html structure looks like this:
         </div>
     </div>
 
+
 ## Use sections, containers, rows and columns
+
+![alt tag](https://github.com/ludwig-schmidt/ls-grid/blob/master/img/grid-instructions.jpg)
 
 Of course you can use any html tag for any class of this grid to make it more semantic:
 
