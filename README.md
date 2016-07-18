@@ -1,5 +1,6 @@
 # ls-grid
-A tiny responsive grid library (2kb compiled)
+A tiny responsive css-grid library (2kb compiled).
+ls-grid is written in Sass syntax (not SCSS!).
 
 ## Installation
 You can install this package using [Bower](http://bower.io/):
