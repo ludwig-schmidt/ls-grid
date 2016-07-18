@@ -68,7 +68,7 @@ Containers control the width of all contents and wrap around rows and columns. O
     
 ### Rows
 
-Rows wrap around columns. The number of specified columns inside a row must be smaller or equal to the maximum number of columns (`$columns`). All columuns inside a row are displayed on the same horizontal line.
+Rows wrap around columns. The number of specified columns inside a row must be smaller or equal to the maximum number of columns (`$columns`). All columns inside a row are displayed on the same horizontal line.
 
     <div class="section">
         <div class="container">
