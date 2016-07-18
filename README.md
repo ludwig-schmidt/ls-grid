@@ -1,5 +1,5 @@
 # ls-grid
-A tiny responsive grid library
+A tiny responsive grid library (2kb compiled)
 
 ## Installation
 You can install this package using [Bower](http://bower.io/):
