@@ -65,7 +65,7 @@ Sections are the main wrappers of this grid: everything goes inside a section. S
     
 ### Containers
 
-Containers control the width of all contents and wrap around rows and columns. One container can contain multiple rows.
+Containers control the width of all contents and wrap around rows and columns. One container can contain multiple rows. The maximum with of the containers equals `$grid-width`.
 
     <div class="section">
         <div class="container">
