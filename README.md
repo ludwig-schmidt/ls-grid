@@ -38,4 +38,7 @@ In the top area of the `_grid.sass` file you can change the grid variables. The 
     $gutter-width: 24px !default
     
 If you put these values into the formula you get a 1140px grid with 12 columns:
+
     12 * 73px + (12-1) * 24px = 1140px
+    
+*Tip: Use a grid calculator to find a good grid size (e.g.:http://gridcalculator.dk/#/1140/12/24/0)*
