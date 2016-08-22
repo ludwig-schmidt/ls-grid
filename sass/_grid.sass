@@ -1,5 +1,5 @@
 ///////////
-// GRID 
+// LS-GRID 
 ///////////
 
 $columns: 12 !default
@@ -11,9 +11,18 @@ $grid-width: $columns * $column-width + ($columns - 1) * $gutter-width
 
 $breakpoint-small: 768px
 $breakpoint-middle: $grid-width
-$breakpoint-big: 1440px
+$breakpoint-large: 1440px
 
 
+$small-prefix: 'sm'
+$middle-prefix: 'md'
+$large-prefix: 'lg'
+
+
+// .w-3 (0px - 767px)
+// .w-sm-3 (768px - ($grid-width - 1))
+// .w-md-3 ($grid-width - 1439px)
+// .w-lg-3 (1440px - ++)
 
 =break-at($point) 
     @media (min-width: $point)  
@@ -61,6 +70,7 @@ $breakpoint-big: 1440px
     &--full-width
         max-width: none
     
+        
 .row
     +clearfix()
     
@@ -82,37 +92,40 @@ $breakpoint-big: 1440px
         margin-right: 0
     
     
-@for $i from 1 to $columns
-    .w-#{$i}
-        width: 100%
-
-
-.m-w-1
-    width: 49%
-    margin-right: 2%
-
-
-+break-at($breakpoint-small)
-    @for $i from 1 through $columns
-        .w-#{$i}
-            width: column($i)
-            margin-right: percentage($gutter-width, $grid-width)
-
-
-        .p-#{$i}
-            margin-left: column($i) + percentage($gutter-width, $grid-width)
-
-    
-.box
-    float: left
-    margin: 0
     
     @for $i from 1 through $columns
         &.w-#{$i}
-            width: (100% / $columns) * $i
-        
-        
-        &.p-#{$i}
-            margin-left: (100% / $columns) * $i
+            width: 100%
 
+
+    +break-at($breakpoint-small)
+        @for $i from 1 through $columns
+            &.w-#{$small-prefix}-#{$i}
+                width: column($i)
+                margin-right: percentage($gutter-width, $grid-width)
+
+
+            &.p-#{$small-prefix}-#{$i}
+                margin-left: column($i) + percentage($gutter-width, $grid-width)
+
+    +break-at($breakpoint-middle)
+        @for $i from 1 through $columns
+            &.w-#{$middle-prefix}-#{$i}
+                width: column($i)
+                margin-right: percentage($gutter-width, $grid-width)
+
+
+            &.p-#{$middle-prefix}-#{$i}
+                margin-left: column($i) + percentage($gutter-width, $grid-width)
+
+
+    +break-at($breakpoint-large)
+        @for $i from 1 through $columns
+            &.w-#{$large-prefix}-#{$i}
+                width: column($i)
+                margin-right: percentage($gutter-width, $grid-width)
+
+
+            &.p-#{$large-prefix}-#{$i}
+                margin-left: column($i) + percentage($gutter-width, $grid-width)
     
