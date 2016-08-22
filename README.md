@@ -1,5 +1,5 @@
 # ls-grid
-A tiny responsive css-grid library (2kb compiled).
+A tiny responsive css-grid library (14kb compiled).
 ls-grid is written in Sass syntax (not SCSS!).
 
 ## Installation
