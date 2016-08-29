@@ -94,17 +94,16 @@ $large-prefix: 'lg'
     
     
 @for $i from 1 through $columns
-    @for $i from 1 through $columns
-        .w-#{$i}
-            width: column($i)
-            margin-right: percentage($gutter-width, $grid-width)
+    .w-#{$i}
+        width: column($i)
+        margin-right: percentage($gutter-width, $grid-width)
 
+@for $i from 0 through $columns
+    .p-#{$i}
+        margin-left: column($i) + percentage($gutter-width, $grid-width)
 
-        .p-#{$i}
-            margin-left: column($i) + percentage($gutter-width, $grid-width)
-        
-    .break
-        margin-right: 0
+.break
+    margin-right: 0
 
 
 +break-at($breakpoint-small)
@@ -113,7 +112,7 @@ $large-prefix: 'lg'
             width: column($i)
             margin-right: percentage($gutter-width, $grid-width)
 
-
+    @for $i from 0 through $columns
         .#{$small-prefix}-p-#{$i}
             margin-left: column($i) + percentage($gutter-width, $grid-width)
 
@@ -128,7 +127,7 @@ $large-prefix: 'lg'
             width: column($i)
             margin-right: percentage($gutter-width, $grid-width)
 
-
+    @for $i from 0 through $columns
         .#{$middle-prefix}-p-#{$i}
             margin-left: column($i) + percentage($gutter-width, $grid-width)
 
@@ -143,7 +142,7 @@ $large-prefix: 'lg'
             width: column($i)
             margin-right: percentage($gutter-width, $grid-width)
 
-
+    @for $i from 0 through $columns
         .#{$large-prefix}-p-#{$i}
             margin-left: column($i) + percentage($gutter-width, $grid-width)
 
