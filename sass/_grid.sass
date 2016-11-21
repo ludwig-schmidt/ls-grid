@@ -9,11 +9,12 @@ $gutter-width: 24px !default
 
 $grid-width: $columns * $column-width + ($columns - 1) * $gutter-width
 
+$breakpoint-mini: 480px
 $breakpoint-small: 768px
 $breakpoint-middle: $grid-width
 $breakpoint-large: 1440px
 
-
+$mini-prefix: 'xs'
 $small-prefix: 'sm'
 $middle-prefix: 'md'
 $large-prefix: 'lg'
@@ -104,6 +105,23 @@ $large-prefix: 'lg'
 
 .break
     margin-right: 0
+
+    
+    
++break-at($breakpoint-mini)
+    @for $i from 1 through $columns
+        .#{$mini-prefix}-w-#{$i}
+            width: column($i)
+            margin-right: percentage($gutter-width, $grid-width)
+
+    @for $i from 0 through $columns
+        .#{$mini-prefix}-p-#{$i}
+            margin-left: column($i) + percentage($gutter-width, $grid-width)
+
+
+    .#{$mini-prefix}--break
+        margin-right: 0
+
 
 
 +break-at($breakpoint-small)
