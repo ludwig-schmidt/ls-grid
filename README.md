@@ -105,3 +105,9 @@ Websites using ls-grid:
 http://www.ludwigschmidt.berlin
 
 http://renk-magazin.de/liebeswedding
+
+http://schaedels.com
+
+http://natalie-mayroth.de
+
+https://berlinartbooks.com
